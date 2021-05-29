@@ -6,11 +6,11 @@
 ## Why?
 You can do this:
 ```swift
-let titleLabel = UILabel().ch
+let titleLabel = UILabel().set
   .text("Welcome")
   .font(.systemFont(ofSize: 20))
   .textAlignment(.center)
-  .ch
+  .get
 ```
 Instead of this:
 ```swift
@@ -49,7 +49,7 @@ You will be able to do:
 ```swift
 let myClass = MyClass()
 
-myClass.ch
+myClass.set
   .text("It works")
   .int(99)
   .myEnum(.value2)
@@ -59,11 +59,11 @@ print(myClass.int) // 99
 print(myClass.myEnum) // .value2
 
 /// immediate usage
-let myClass = MyClass().ch
+let myClass = MyClass().set
   .text("It works")
   .int(99)
   .myEnum(.value2)
-  .ch // gains the instance back
+  .get // gains the instance back
 ```
 
 ## How it works?

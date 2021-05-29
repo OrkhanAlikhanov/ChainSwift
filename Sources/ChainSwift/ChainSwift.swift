@@ -7,14 +7,14 @@
 
 @dynamicMemberLookup
 public struct Chain<Base> {
-  public var ch: Base
+  public var get: Base
   
   init(_ base: Base) {
-    self.ch = base
+    self.get = base
   }
   
   public subscript<T>(dynamicMember keyPath: WritableKeyPath<Base, T>) -> Callable<Base, T> {
-    Callable(ch, keyPath: keyPath)
+    Callable(get, keyPath: keyPath)
   }
 }
 
@@ -37,16 +37,12 @@ public class Callable<Base, T> {
 public protocol Chainable {
   associatedtype ChainableBase
   
-  static var ch: Chain<ChainableBase>.Type { get }
-  var ch: Chain<ChainableBase> { get }
+  var set: Chain<ChainableBase> { get }
 }
 
 public extension Chainable {
-  static var ch: Chain<Self>.Type {
-    Chain<Self>.self
-  }
-  
-  var ch: Chain<Self> {
+  var set: Chain<Self> {
     Chain(self)
   }
 }
+

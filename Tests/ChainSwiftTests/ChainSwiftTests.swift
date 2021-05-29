@@ -10,6 +10,8 @@ class MyClass {
   var text = ""
   var int = 0
   var myEnum: MyEnum = .value1
+  
+  static var next = 2
 }
 
 struct MyStruct {
@@ -34,7 +36,7 @@ final class ChainSwiftTests: XCTestCase {
     XCTAssertEqual(myClass.int, 0)
     XCTAssertEqual(myClass.myEnum, .value1)
     
-    myClass.ch
+    myClass.set
       .text("It works")
       .int(99)
       .myEnum(.value2)
@@ -45,11 +47,11 @@ final class ChainSwiftTests: XCTestCase {
   }
   
   func testTakingChValueWorks() {
-    let myClass = MyClass().ch
+    let myClass = MyClass().set
       .text("It works")
       .int(99)
       .myEnum(.value2)
-      .ch
+      .get
     
     XCTAssertEqual(myClass.text, "It works")
     XCTAssertEqual(myClass.int, 99)
@@ -63,11 +65,11 @@ final class ChainSwiftTests: XCTestCase {
     XCTAssertEqual(myStruct.int, 0)
     XCTAssertEqual(myStruct.myEnum, .value1)
     
-    let updatedMyStruct = myStruct.ch
+    let updatedMyStruct = myStruct.set
       .text("It works")
       .int(99)
       .myEnum(.value2)
-      .ch
+      .get
 
     XCTAssertEqual(myStruct.text, "")
     XCTAssertEqual(myStruct.int, 0)
