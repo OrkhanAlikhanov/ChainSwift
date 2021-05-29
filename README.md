@@ -15,9 +15,9 @@ let titleLabel = UILabel().set
 Instead of this:
 ```swift
 let titleLabel = UILabel()
-titleLabel.text("Welcome")
-titleLabel.font(.systemFont(ofSize: 20))
-titleLabel.textAlignment(.center)
+titleLabel.text = "Welcome"
+titleLabel.font = .systemFont(ofSize: 20)
+titleLabel.textAlignment = .center
 ```
 
 ## Usage
