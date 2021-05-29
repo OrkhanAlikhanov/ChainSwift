@@ -69,28 +69,34 @@ let myClass = MyClass().set
 ## How it works?
 It combines Swift's [Key Path Member Lookup](https://github.com/apple/swift-evolution/blob/main/proposals/0252-keypath-dynamic-member-lookup.md) and [`func callAsFunction`](https://github.com/apple/swift-evolution/blob/main/proposals/0253-callable.md) features to achive this. 
 
+## Other works
+- [LayoutSwift](https://github.com/OrkhanAlikhanov/LayoutSwift) - Yet another Swift Autolayout DSL for iOS.
+
 ## Installation
 
 ### Swift Package Manager
 
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Socket.swift does support its use on supported platforms. 
+_Note: Instructions below are for using **SwiftPM** without the Xcode UI. It's the easiest to go to your Project Settings -> Swift Packages and add ChainSwift from there._
 
-Once you have your Swift package set up, adding Socket.swift as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+To integrate using Apple's [Swift Package Manager](https://swift.org/package-manager/) , without Xcode integration, add the following as a dependency to your `Package.swift`:
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/OrkhanAlikhanov/ChainSwift.git", .upToNextMajor(from: "1.0.0"))
+  .package(url: "https://github.com/OrkhanAlikhanov/ChainSwift.git", .upToNextMajor(from: "1.0.1"))
 ]
 ```
+and then specify `"ChainSwift"` as a dependency of the Target in which you wish to use ChainSwift.
 
 ### Manually
 Just drag and drop the files in the [Sources](https://github.com/OrkhanAlikhanov/ChainSwift/blob/master/Sources) folder.
 
 ## Authors
-
 * **Orkhan Alikhanov** - *Initial work* - [OrkhanAlikhanov](https://github.com/OrkhanAlikhanov)
 
 See also the list of [contributors](https://github.com/OrkhanAlikhanov/ChainSwift/contributors) who participated in this project.
+
+## Love our work?
+Hit the star 🌟 button! It helps! ❤️
 
 ## License
 
