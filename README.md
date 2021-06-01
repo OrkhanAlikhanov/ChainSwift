@@ -71,6 +71,7 @@ It combines Swift's [Key Path Member Lookup](https://github.com/apple/swift-evol
 
 ## Other works
 - [LayoutSwift](https://github.com/OrkhanAlikhanov/LayoutSwift) - Yet another Swift Autolayout DSL for iOS.
+- [SwiftUIRouter](https://github.com/OrkhanAlikhanov/SwiftUIRouter) - An experimental navigation router for SwiftUI.
 
 ## Installation
 
